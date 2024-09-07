@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aleksei the developer</title>
 
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/styles/main.css" />
     <script type="module" src="/scripts/main.js" defer></script>
@@ -20,7 +21,11 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
-      <button class="navigation__theme_toggle" onclick="toggleTheme()">
+      <button
+        class="navigation__theme_toggle"
+        onclick="toggleTheme()"
+        type="button"
+      >
         <img
           src="/static/svg/sun.svg"
           data-reference="sun-icon"
@@ -34,8 +39,8 @@
       </button>
     </nav>
 
-    <section class="hero" data-popper>
-      <h1>
+    <header class="hero" data-popper>
+      <h1 class="hero__title">
         <span class="hero__name">Aleksei</span>
         <span class="hero__surname">Stukalov</span>
         <span class="hero__position">Full Stack Developer</span>
@@ -44,7 +49,7 @@
       <p class="hero__partnership">
         Have a job for me? Please <a href="/contact">contact me</a>
       </p>
-    </section>
+    </header>
 
     <section id="talent"></section>
   </body>
