@@ -22,9 +22,9 @@
 }
 
 /* min body height */
-body {
-  min-height: 100svh;
-}
+body { min-height: 100svh; }
+/* Prevent user from double tab zooming on mobile */
+html { touch-action: manipulation; }
 
 /* responsive images/videos */
 img,
@@ -46,9 +46,7 @@ h6 {
   transition: color 0.2s;
 }
 
-p {
-  transition: color 0.2s;
-}
+p { transition: color 0.2s; }
 
 /* improve readability with max-width on paragraphs and lists */
 /* prevent orphans in supported browsers */
