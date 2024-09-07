@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/static/fonts/Mona-Sans.ttf') format('truetype'),
+    url('/static/fonts/Mona Sans/Mona-Sans.woff2') format('woff2'),
+    url('/static/fonts/Mona Sans/Mona-Sans.woff') format('woff');
+}
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  list-style: none;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  transition: color 0.2s;
+}
+
+p {
+  transition: color 0.2s;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}

@@ -4,21 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aleksei the developer</title>
-    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
-    <!-- <script type="module" src="/scripts/main.js" defer></script> -->
-  </head>
-  <body>
-    <nav class="navigation"></nav>
 
-    <section class="hero">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <nav class="navigation">
+      <div>
+        <p class="navigation__disclaimer">navigation:</p>
+        <ul class="navigation__links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/values">Values</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <button class="navigation__theme_toggle" onclick="toggleTheme()">
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <section class="hero" data-popper>
       <h1>
-        <span id="hero__name">Aleksei</span>
-        <span id="hero__surname">Stukalov</span>
-        <span id="hero__position">Full Stack Developer</span>
-        <span id="hero__statement">With a passion for Front End</span>
+        <span class="hero__name">Aleksei</span>
+        <span class="hero__surname">Stukalov</span>
+        <span class="hero__position">Full Stack Developer</span>
+        <span class="hero__statement">With a passion for Front-End</span>
       </h1>
+      <p class="hero__partnership">
+        Have a job for me? Please <a href="/contact">contact me</a>
+      </p>
     </section>
 
-    <section id="Talent"></section>
+    <section id="talent"></section>
   </body>
 </html>
