@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale-1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Aleksei the developer . Blog . CSS Box Model</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="navigation">
+      <div>
+        <p class="navigation__disclaimer">lost? look here:</p>
+        <ul class="navigation__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/values/">Values</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <button
+        class="navigation__theme_toggle"
+        onclick="toggleTheme()"
+        type="button"
+      >
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header">
+      <h1>CSS Box Model</h1>
+      <img src="/static/images/css-box-model.webp" alt="CSS Box Model" />
+    </header>
+
+    <main class="blog__main">
+      <h2>Understanding the Box Model</h2>
+      <p>
+        When it comes to controlling the layout and design of elements on a
+        webpage, understanding the CSS Box Model is essential. It defines how
+        elements are displayed, spaced, and sized on a page. At the heart of the
+        box model are four key areas: the content, padding, border, and margin.
+        For this blog post, I will focus on the differences between these areas,
+        and how each one impacts the design and spacing of elements.
+      </p>
+
+      <h2>The Basics</h2>
+      <p>
+        Before diving into the differences between margin, border, and padding,
+        it's important to understand how they fit into the overall CSS box
+        model. Here's a simple description of how the model works:
+      </p>
+      <p>
+        <span class="blog__bold">Content:</span> is the area where your text,
+        images, or other elements live.
+      </p>
+      <p>
+        <span class="blog__bold">Padding:</span> is the space between the
+        content and the border.
+      </p>
+      <p>
+        <span class="blog__bold">Border:</span> is a line that wraps around the
+        padding and content.
+      </p>
+      <p>
+        <span class="blog__bold">Margin:</span> is the space outside the border
+        that separates the element from other elements.
+      </p>
+
+      <h2>Margin: The Outer Spacing</h2>
+      <p>
+        The margin is the outermost part of the CSS box model and controls the
+        space between an element and its neighboring elements. Margins are
+        entirely transparent, and they don't have a background color or any
+        visible styles. Their main function is to create space around an
+        element, so it doesn't touch or overlap with other elements.
+      </p>
+
+      <div>
+        <p class="blog__small">Code:</p>
+        <!-- prettier-ignore-start -->
+        <pre><code>div.apple {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+</code></pre>
+        <!-- prettier-ignore-end -->
+      </div>
+
+      <div>
+        <p class="blog__small">Viewport:</p>
+        <div class="blog__code_visualiser">
+          <style>
+            .blog__code_visualiser {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .example-alfa,
+            .example-bravo {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              font-weight: 400;
+            }
+
+            .example-bravo {
+              margin-top: 20px;
+              margin-right: 15px;
+              margin-left: 10px;
+            }
+
+            /* Tablet and up*/
+            @media screen and (min-width: 30rem) {
+              .blog__code_visualiser {
+                justify-content: start;
+                gap: 5rem;
+              }
+            }
+          </style>
+          <div>
+            <div class="box box-alfa"></div>
+            <div class="box box-bravo example-alfa"></div>
+          </div>
+          <div>
+            <div class="box box-alfa"></div>
+            <div class="box box-bravo example-bravo"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Border: The Visible Edge</h2>
+      <p>
+        The border wraps around the padding and content, acting as a visible
+        edge for the element. Borders can be styled in a variety of ways—solid,
+        dashed, dotted, or even invisible. They also have a width, color, and
+        style that we can customise. Borders can be individually set for each
+        side, which is cool. The width of the border can add to the total size
+        of the element if box-sizing rule is not set to border-box.
+      </p>
+
+      <div>
+        <p class="blog__small">Code:</p>
+        <!-- prettier-ignore-start -->
+        <pre><code>div.bravo {
+  border: 16px solid #ff4a49;
+  box-sizing: border-box;
+}
+</code></pre>
+        <!-- prettier-ignore-end -->
+      </div>
+
+      <div>
+        <p class="blog__small">Viewport:</p>
+        <div class="blog__code_visualiser">
+          <style>
+            .example-falcon {
+              display: flex;
+              gap: 5rem;
+            }
+
+            .example-canada {
+              border: 16px solid #ff4a49;
+            }
+          </style>
+          <div class="example-falcon">
+            <div class="box box-alfa"></div>
+            <div class="box box-alfa example-canada"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Padding: The Inner Spacing</h2>
+      <p>
+        The padding controls the space between the content and the border of an
+        element. Unlike margins, padding is inside the element's border, which
+        means that it pushes the content inward rather than creating space
+        outside the element. Padding is typically used to create breathing room
+        for the content so that text or images aren't too close to the edge of
+        the container.
+      </p>
+
+      <div>
+        <p class="blog__small">Code:</p>
+        <!-- prettier-ignore-start -->
+        <pre><code>div.canada {
+  padding-top: 32px;
+  padding-left: 16px;
+}
+</code></pre>
+        <!-- prettier-ignore-end -->
+      </div>
+
+      <div>
+        <p class="blog__small">Viewport:</p>
+        <div class="blog__code_visualiser">
+          <style>
+            .example-delta {
+              padding-top: 32px;
+              padding-left: 16px;
+            }
+
+            .example-echo {
+              width: 48px;
+              height: 48px;
+              background-color: #ff4a49;
+            }
+          </style>
+          <div class="example-falcon">
+            <div class="box box-alfa">
+              <div class="box-bravo example-echo"></div>
+            </div>
+            <div class="box box-alfa example-delta">
+              <div class="box-bravo example-echo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Conclusion</h2>
+      <p>
+        Understanding the differences between margin, border, and padding is
+        crucial for controlling the layout and design of the webpage. The CSS
+        box model can be tricky at first, but once you grasp how these elements
+        interact, you'll have much better control over your website's structure
+        and appearance.
+      </p>
+      <p>
+        Think of the box model in terms of layers, starting from the inside
+        (content), moving outward through padding, border, and finally margin.
+      </p>
+      <p>
+        Experiment with different margin, border, and padding values to see how
+        they affect the layout, and you'll quickly become more comfortable
+        designing responsive and aesthetically pleasing websites.
+      </p>
+      <a class="blog__footer" href="/blog/">Back to the blog article list</a>
+    </main>
+  </body>
+</html>
