@@ -35,6 +35,10 @@
   }
 }
 
+html {
+  touch-action: manipulation;
+}
+
 body[data-color-theme='dark'] {
   --clr-primary: var(--clr-youngnight);
   --clr-secondary: var(--clr-bone);
