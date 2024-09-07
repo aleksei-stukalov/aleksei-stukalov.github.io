@@ -10,7 +10,7 @@
     <title>Aleksei the developer</title>
 
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/styles/main.css" />
     <script type="module" src="/scripts/main.js" defer></script>
   </head>
@@ -18,7 +18,7 @@
     <script>
       // We want to remember the theme user has selected, so let's check it.
       // Let's check if the theme exists and only do stuff in that case.
-      // P.S. can't do early returns in embeded script on html file..
+      // P.S. can't do early returns in inline script on html file..
       if (localStorage.getItem('theme')) {
         document.body.dataset.colorTheme = localStorage.getItem('theme')
       }
@@ -28,10 +28,10 @@
       <div>
         <p class="navigation__disclaimer">lost? look here:</p>
         <ul class="navigation__links">
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/values">Values</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/values/">Values</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
       <button
@@ -63,5 +63,17 @@
         Have a job for me? Please <a href="/contact">contact me</a>
       </p>
     </header>
+
+    <script type="module">
+      // Weird that I can import inside the inline script..
+      import { Popper } from '/scripts/Popper.js'
+
+      // Popper element
+      const popper = document.body.querySelector('[data-popper] .hero__title')
+      // Function Popper will take a heading element as an input, then separate
+      // each character in it's own span element, and do some magic with it.
+      const popperElements = Array.from(popper.children)
+      popperElements.forEach((heading) => Popper(heading)) // adds effect to headings
+    </script>
   </body>
 </html>
