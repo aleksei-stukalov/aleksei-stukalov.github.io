@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('home.css');
+@import url('blog.css');
 
 :root {
   --clr-youngnight: #232323;
