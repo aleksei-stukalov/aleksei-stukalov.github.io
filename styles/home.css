@@ -1,6 +1,7 @@
 .hero {
-  margin-top: 20svh;
-  margin-bottom: 10svh;
+  --hero-block-padding: 15svh;
+
+  padding-block: var(--hero-block-padding);
   display: flex;
   flex-direction: column;
 
@@ -8,7 +9,25 @@
   background-color: var(--clr-primary);
 }
 
-.hero > h1 {
+@media screen and (min-width: 30rem) and (max-width: calc(60rem - 1px)) {
+  .hero {
+    --hero-block-padding: 10rem;
+  }
+}
+
+@media screen and (min-width: 60rem) and (max-width: calc(85rem - 1px)) {
+  .hero {
+    --hero-block-padding: 15rem;
+  }
+}
+
+@media screen and (min-width: 85rem) {
+  .hero {
+    --hero-block-padding: 20svh;
+  }
+}
+
+.hero__title {
   display: flex;
   flex-direction: column;
 }
@@ -36,16 +55,39 @@
   text-transform: uppercase;
 }
 
-.hero > h1 > span > [data-state='current'] {
+@media screen and (max-width: calc(30rem - 1px)) {
+  .hero__name,
+  .hero__surname {
+    font-size: 3rem;
+  }
+
+  .hero__position {
+    font-size: 1.2rem;
+    letter-spacing: 1.5pt;
+  }
+
+  .hero__statement {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 30rem) {
+  .navigation__links {
+    margin-top: 0.5rem;
+    gap: 2rem;
+  }
+}
+
+.hero__title > span > [data-state='current'] {
   color: var(--clr-accent);
   font-weight: 900;
 }
 
-.hero > h1 > span > [data-state='close'] {
+.hero__title > span > [data-state='close'] {
   font-weight: 700;
 }
 
-.hero > h1 > span > [data-state='far'] {
+.hero__title > span > [data-state='far'] {
   font-weight: 400;
 }
 

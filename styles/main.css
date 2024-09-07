@@ -63,19 +63,24 @@ body a:hover {
   color: var(--clr-accent);
 }
 
-body > section,
-.navigation {
+body > * {
   padding-inline: var(--padding-inline);
 }
 
 .navigation {
-  position: relative;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: end;
+
   padding-block: 2rem;
   font-size: 1rem;
   letter-spacing: 1.5pt;
+
+  background-color: var(--clr-primary);
 }
 
 .navigation__disclaimer {
@@ -83,10 +88,23 @@ body > section,
 }
 
 .navigation__links {
-  margin-top: 0.5rem;
   display: flex;
-  gap: 2rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: calc(30rem - 1px)) {
+  .navigation__links {
+    margin-top: 0.75rem;
+    align-items: end;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 30rem) {
+  .navigation__links {
+    margin-top: 0.5rem;
+    gap: 2rem;
+  }
 }
 
 .navigation__links a:hover {
@@ -107,16 +125,17 @@ body > section,
   width: 24;
   height: 24;
   transition: opacity 0.2s;
-}
-
-body[data-color-theme='dark']
-  .navigation__theme_toggle
-  > img[data-reference='moon-icon'] {
   opacity: 0;
 }
 
 body[data-color-theme='light']
   .navigation__theme_toggle
+  > img[data-reference='moon-icon'] {
+  opacity: 1;
+}
+
+body[data-color-theme='dark']
+  .navigation__theme_toggle
   > img[data-reference='sun-icon'] {
-  opacity: 0;
+  opacity: 1;
 }
