@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Aleksei the developer . Identity, Values and Strengths</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="navigation">
+      <div>
+        <p class="navigation__disclaimer">lost? look here:</p>
+        <ul class="navigation__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Tech Blog</a></li>
+          <li><a href="/identity-values.html">Identity&Values</a></li>
+          <li><a href="/learning-plan.html">Learning Plan</a></li>
+        </ul>
+      </div>
+      <button
+        class="navigation__theme_toggle"
+        onclick="toggleTheme()"
+        type="button"
+      >
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header" data-popper>
+      <h1>Identity, Values, and Strengths</h1>
+    </header>
+
+    <main class="blog__main">
+      <h2>
+        Explain a situation where you have made an ethical decision. Discuss how
+        you weighed up the values involved in that decision, the decision you
+        made, and how you reflect on the decision now.
+      </h2>
+      <p>
+        I am not sure how much choice I had in that situation, and even if it
+        can be consider “ethical”, but at my previous employment at a Tech
+        company I was hired for a newely picked up contract by the company, it
+        was for a web platform project and was for a long development time and a
+        high budget, but when I started I have quickly realised that I was not a
+        right person for the job, since I only had under a year of the
+        programming experience and the job was for either a team of developers
+        with similar experience as mine or for for a super-duper smart senior
+        programmer. So I was in the situation to either keep myself busy working
+        and hoping to get enough knowledge to make the project work (and that
+        would be a big gamble) or be honest with the employer and explain them
+        that they are not going to get by with only one developer. Maybe the
+        fact that there was a huge probability that the project would be
+        unfinished and not ideal at the end, has influenced my decision, but I
+        became to be clear and honest about the difficulties and struggles with
+        time on each meeting The company realised at the end that they won't be
+        able to save on the dev team, and unfortunately had to drop the
+        contract, and with that I lost my job, since that was the contract I got
+        hired for.. which is fine, at least no client got screwed over and no
+        team got to the situation where they are blamed.
+      </p>
+      <h2>
+        Describe how your culture and the people around you have influenced your
+        values and identity.
+      </h2>
+      <p>
+        I think the biggest thing that influences me from my culture is the
+        community driven behavior rules. It is a very common thing in
+        commune-like cultures, where people live close to each other (family,
+        neighbours, nation), where it is very important to act and behave the
+        way it is expected. Even if its controversial and I am not always agree
+        with this cultural aspect, it is definitely still is in my personal
+        culture and influencing my life.
+      </p>
+      <h2>
+        Identify your strengths and how they will support you during your
+        learning journey.
+      </h2>
+      <p>
+        My biggest strength is Curiosity. I think it is a great support for this
+        study, since I am getting with the preexisting knowledge and experience,
+        my curiosity allows me to take up a challenge and step a little bit
+        further, expend my skills and discover new things.
+      </p>
+      <h2>
+        Evaluate your limitations in terms of your learning and career
+        development. How might these affect your learning journey?
+      </h2>
+      <p>
+        One of my main limitations is a lack of discipline. I tend to seek
+        excitement and novelty, which makes it hard for me to start tasks,
+        especially if they feel repetitive or unchallenging. As a Peacock
+        personality type, I thrive on new experiences, but this can lead to
+        losing focus on foundational tasks. That said, my curiosity drives me to
+        explore and learn, which helps me stay motivated. With enough practice
+        and effort, I believe I can improve my discipline and push through those
+        slower, less exciting parts of the learning process.
+      </p>
+      <h2>
+        Share an example of when you were trying to work productively with
+        others, but there was resistance or tension. Discuss strategies you
+        tried at the time, how effective they were, and your reflections on what
+        other strategies you would try now and why.
+      </h2>
+      <p>
+        Back in the days when I was doing some labor jobs I was working at a
+        transport company and we had few very stubborn and lazy workers. The
+        problem was that the job load was set in stone and it had to be done, so
+        when someone was putting much less work into the job, that meant that
+        the rest had to work harder. At the time, I tried to address this by
+        speaking up during our team meetings and encouraging everyone to step up
+        their efforts. I thought direct communication might solve the issue, but
+        it didn't have much impact. The workers continued their behavior, and
+        the frustration in the team only grew. <br />
+        Looking back, I think a different approach might have been more
+        effective. Instead of confronting the issue head-on, I could have taken
+        a more collaborative route, maybe suggesting we divide the work more
+        fairly or rotate tasks so that no one felt like they were being singled
+        out.
+      </p>
+    </main>
+  </body>
+</html>
