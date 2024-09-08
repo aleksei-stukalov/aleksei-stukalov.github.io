@@ -51,7 +51,8 @@
 .blog__bold { font-weight: 500; }
 .blog__small { font-size: 0.8rem; margin-top: 1rem; margin-bottom: 0.5rem; }
 .blog__spaces { line-height: 1.5rem; }
-.blog__main > h2 { font-size: 1.2rem; font-weight: 500; margin-top: 2rem;}
+.blog__main > h2 { font-size: 1.2rem; font-weight: 500; margin-top: 2rem; }
+.blog__main > h2 { max-width: 50rem; }
 .blog__main > p { font-size: 1.2rem; }
 
 pre code {
