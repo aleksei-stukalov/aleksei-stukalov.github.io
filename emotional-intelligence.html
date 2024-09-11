@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Aleksei the developer . Emotional Intelligence</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="navigation">
+      <div>
+        <p class="navigation__disclaimer">lost? look here:</p>
+        <ul class="navigation__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Tech Blog</a></li>
+          <li><a href="/identity-values.html">Identity&Values</a></li>
+          <li><a href="/learning-plan.html">Learning Plan</a></li>
+        </ul>
+      </div>
+      <button
+        class="navigation__theme_toggle"
+        onclick="toggleTheme()"
+        type="button"
+      >
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header" data-popper>
+      <h1>Emotional Intelligence</h1>
+    </header>
+
+    <main class="blog__main">
+      <h2></h2>
+      <p></p>
+    </main>
+  </body>
+</html>
