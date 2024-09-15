@@ -49,6 +49,8 @@
 
 .blog__italic { font-style: italic; }
 .blog__bold { font-weight: 500; }
+/* Need to finish focused styles */
+.blog__focused { color: var(--clr-accent); } 
 .blog__small { font-size: 0.8rem; margin-top: 1rem; margin-bottom: 0.5rem; }
 .blog__spaces { line-height: 1.5rem; }
 .blog__main > h2 { font-size: 1.2rem; font-weight: 500; margin-top: 2rem; }
