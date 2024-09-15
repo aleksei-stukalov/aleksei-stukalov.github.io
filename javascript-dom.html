@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Aleksei the developer . Blog . Good Old</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="navigation">
+      <div>
+        <p class="navigation__disclaimer">lost? look here:</p>
+        <ul class="navigation__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Tech Blog</a></li>
+          <li><a href="/human/">Human Blog</a></li>
+        </ul>
+      </div>
+      <button
+        class="navigation__theme_toggle"
+        onclick="toggleTheme()"
+        type="button"
+      >
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header">
+      <h1>JavaScript Fundamentals: A Simple Breakdown</h1>
+      <img src="/static/images/css-box-model.webp" alt="CSS Box Model" />
+    </header>
+
+    <main class="blog__main">
+      <h2>A Simple Breakdown</h2>
+      <p>
+        JavaScript is one of those programming languages that, when you start
+        out, seems like a mountain to climb. When I first began learning about
+        it, along with HTML and CSS, it felt overwhelming. But as I’ve gone
+        deeper, I’ve found ways to explain these concepts in simple terms.
+        Hopefully, by the end of this post, you'll have a clearer idea of what
+        JavaScript is, how it interacts with HTML and CSS, and some of its key
+        features.
+      </p>
+
+      <h2>JavaScript, HTML, and CSS: How They Work Together</h2>
+      <p>
+        Imagine you're building a house. HTML is the structure—the walls, doors,
+        and windows—basically, the blueprint of your website. CSS is the paint,
+        the design, the interior decoration that makes the house look nice.
+        JavaScript? It’s the electricity running through the house. It makes
+        things happen, brings the space to life, like turning on lights or
+        opening doors when you click them. HTML sets up the content, CSS makes
+        it visually appealing, and JavaScript brings the interactivity.
+      </p>
+
+      <h2>Control Flow and Loops: A Real-World Example</h2>
+      <p>
+        In programming, control flow is simply the order in which code runs. To
+        put it simply, it’s like following instructions step-by-step, one after
+        another. But sometimes, you don’t want to follow every step in order—you
+        need to make decisions. That’s where conditions and loops come in.
+      </p>
+      <p>Let’s take an example from real life. Imagine you’re doing laundry.</p>
+
+      <ol>
+        <li>Start the washing machine.</li>
+        <li>
+          Check if the clothes are clean. If they are, move to the next step. If
+          not, run the wash cycle again.
+        </li>
+        <li>Once the clothes are clean, move them to the dryer.</li>
+        <li>
+          Check if they’re dry. If yes, take them out. If not, keep drying.
+        </li>
+      </ol>
+
+      <p>
+        In code, this is handled by control flow, using if/else conditions and
+        loops (like running the washing cycle again). A loop helps you repeat
+        actions—like checking if clothes are dry—until a specific condition is
+        met.
+      </p>
+
+      <h2>What is the DOM?</h2>
+      <p>
+        The DOM (Document Object Model) is basically a live map of your website.
+        It represents all the elements on the webpage—text, images, buttons,
+        etc.—in a structure that JavaScript can manipulate. Think of it like a
+        digital model of your house that JavaScript can interact with, without
+        having to knock down and rebuild the house itself.
+      </p>
+
+      <p>
+        For example, you can use JavaScript to interact with the DOM and make
+        changes on your website. Let’s say you want to change the text on a
+        button when someone clicks on it. Instead of manually altering the HTML
+        file, JavaScript allows you to modify the DOM, making the update right
+        there on the screen without changing the original structure.
+      </p>
+
+      <h2>Arrays vs Objects: Accessing Data</h2>
+      <p>
+        In JavaScript, you’ve got two common ways to store data: arrays and
+        objects.
+      </p>
+
+      <ul>
+        <li>
+          Arrays are like numbered shelves in a library. Each shelf has a book,
+          and each book is in a specific order. To get a book, you just need to
+          know which shelf it’s on, starting from 0. For example, if you have an
+          array like
+          <span class="blog__focused">['apple', 'banana', 'cherry']</span>, and
+          you want the second fruit, you’d use
+          <span class="blog__focused">array[1]</span> to get
+          <span class="blog__focused">‘banana’</span>.
+        </li>
+        <li>
+          Objects, on the other hand, are like a filing cabinet where each
+          drawer has a label. Instead of numbers, you use keys (names) to find
+          the data you need. For example, if you have an object like
+          <span class="blog__focused">{name: 'John', age: 25}</span>, you’d
+          access the age by using
+          <span class="blog__focused">object.age</span> or
+          <span class="blog__focused">object['age']</span>.
+        </li>
+      </ul>
+
+      <p>
+        The key difference is that arrays are ordered by index, while objects
+        are more like named properties.
+      </p>
+
+      <h2>What are Functions and Why Are They Useful?</h2>
+      <p>
+        Functions are like little machines that do specific tasks. Think of them
+        as a recipe in a cookbook. Instead of writing down the steps to make a
+        dish every time, you write it once, give it a name, and refer to it
+        whenever you need to make that dish again.
+      </p>
+      <p>
+        In JavaScript, functions allow you to package up chunks of code that you
+        can use repeatedly, whenever you need them. This helps keep your code
+        clean, organized, and easy to maintain. It’s way more efficient than
+        copying and pasting the same logic over and over.
+      </p>
+      <p>For example, you could have a function that adds two numbers:</p>
+
+      <!-- prettier-ignore-start -->
+      <pre><code>function add(a, b) {
+  return a + b;
+}</code></pre>
+      <!-- prettier-ignore-end -->
+
+      <p>
+        Now, anytime you need to add two numbers, you just call the add
+        function, and it’ll take care of the rest.
+      </p>
+
+      <h2>Wrapping Up</h2>
+      <p>
+        At first glance, JavaScript can seem like a lot to take in. But when you
+        break it down into smaller, digestible concepts, it starts to make a lot
+        more sense. HTML builds the structure, CSS styles it, and JavaScript
+        brings it all to life. Control flow, loops, DOM manipulation, arrays,
+        objects, and functions are all fundamental pieces that help make your
+        website dynamic, interactive, and smart.
+      </p>
+
+      <p>
+        I hope this post gives you a clearer idea of how all these pieces fit
+        together!
+      </p>
+
+      <a class="blog__footer" href="/blog/">Back to the blog article list</a>
+    </main>
+  </body>
+</html>
