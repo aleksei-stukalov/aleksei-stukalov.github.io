@@ -24,21 +24,13 @@
       }
     </script>
 
-    <nav class="navigation">
-      <div>
-        <p class="navigation__disclaimer">lost? look here:</p>
-        <ul class="navigation__links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/blog/">Tech Blog</a></li>
-          <li><a href="/culture/">Cultural Blog</a></li>
-          <li><a href="/contact/">Contacts</a></li>
-        </ul>
-      </div>
-      <button
-        class="navigation__theme_toggle"
-        onclick="toggleTheme()"
-        type="button"
-      >
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" data-current>Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
         <img
           src="/static/svg/sun.svg"
           data-reference="sun-icon"
