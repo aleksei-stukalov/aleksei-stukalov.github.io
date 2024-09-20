@@ -29,7 +29,7 @@
   letter-spacing: 0.5pt;
 }
 
-.blog__footer { padding-top: 5rem; text-decoration: underline; }
+.blog__footer { margin-top: 5rem; text-decoration: underline; }
 .blog__footer:hover { text-decoration: underline; }
 
 .blog__italic { font-style: italic; }
