@@ -88,8 +88,7 @@ a:hover { color: var(--clr-accent); }
   opacity: 0;
 }
 
-.navigation__links a:hover { text-decoration: underline; }
-.navigation__disclaimer { font-size: 0.8rem; }
+.navigation__links a[data-current] { font-weight: 700; }
 body[data-color-theme='light'] [data-reference='moon-icon'] { opacity: 1; }
 body[data-color-theme='dark'] [data-reference='sun-icon'] { opacity: 1; }
 
