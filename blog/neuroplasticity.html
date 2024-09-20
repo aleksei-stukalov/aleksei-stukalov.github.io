@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Neuroplasticity and Growth Mindset - Aleksei the developer</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" data-current>Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header">
+      <h1>Neuroplasticity and Growth Mindset</h1>
+    </header>
+
+    <main class="blog__main">
+      <h2>How Understanding Neuroplasticity Benefits People</h2>
+      <p>
+        Neuroplasticity is like a superpower we didn't know we had. It's the
+        brain's ability to reshape and rewire itself based on experience, which
+        is amazing because it means we're not stuck with what we're born with.
+        Understanding this is a game-changer — it means our brains are more like
+        Play-Doh than concrete. This knowledge takes a lot of pressure off
+        because it means you can keep learning and improving, no matter your
+        age. It's especially beneficial if you've struggled with something in
+        the past, like learning a new skill or even recovering from an injury.
+        The brain wants to change; we just need to give it the right kind of
+        challenge.
+      </p>
+
+      <h2>How I Might Engage With Neuroplasticity for My Benefit</h2>
+      <p>
+        Knowing about neuroplasticity makes me feel like I have a cheat code for
+        life. When I'm learning something new, every time I practice, my brain
+        is literally getting stronger at it. That's kind of wild, right? Even
+        when I mess up or feel stuck, I'm still building those neural pathways.
+        I can take advantage of this by making practice a habit, knowing that
+        consistency is where the magic happens. So, even if I hit a frustrating
+        bug in my code or get stuck, I know that putting in the effort isn't
+        wasted — it's strengthening those brain muscles.
+      </p>
+
+      <h2>Ways to Increase Neuroplasticity</h2>
+      <p>
+        First, challenge your brain with new experiences. That could be learning
+        a new language, picking up a musical instrument (even if it's just
+        guitar hero!), or switching up your routine. Physical exercise is also a
+        huge booster — running, lifting, or even yoga can make your brain more
+        adaptable. And then, there's sleep, which is when the brain consolidates
+        learning and makes those changes permanent. So, if anyone ever gives you
+        grief for sleeping in, just tell them you're working on your brain!
+      </p>
+      <p>
+        <span class="blog__bold">Fun Fact: </span>London cab drivers actually
+        have a larger hippocampus (the part of the brain associated with
+        navigation) because of all the crazy routes they memorize. If they can
+        change their brains, so can we!
+      </p>
+
+      <h2>Useful Resource</h2>
+      <p>
+        One resource that really stood out to me is this
+        <a href="https://www.brainhq.com/">BrainHQ article</a>. It dives into
+        how neuroplasticity works and how we can use it to learn faster and
+        recover better. Definitely worth checking out!
+      </p>
+
+      <h2>What Growth Mindset Is and Why It's Relevant</h2>
+      <p>
+        A growth mindset is basically the belief that you can get better at
+        something with effort and practice. It's the opposite of a fixed
+        mindset, which says you're born with a certain amount of talent and
+        intelligence, and that's it. It's relevant because this mindset is what
+        makes you keep going when things get tough. If you've ever wanted to
+        quit when you didn't get something right away (yup, been there),
+        adopting a growth mindset helps you see those struggles as part of the
+        process, not a dead-end. So when I'm learning how to debug something for
+        the hundredth time, I'm not “failing” — I'm just on my way to figuring
+        it out.
+      </p>
+
+      <h2>Did Anything Surprise or Change for Me?</h2>
+      <p>
+        What surprised me is how much impact a simple belief can have on
+        performance. I always thought being smart or good at something was kind
+        of a fixed trait, but turns out, a lot of it comes down to just
+        believing you can improve. It made me realize that I've probably held
+        myself back in the past by thinking, “I'm just not good at this,”
+        instead of asking, “How can I get better at this?” So, it's kind of a
+        relief knowing that the power to improve is in my hands (or brain, I
+        guess).
+      </p>
+
+      <h2>How I'll Integrate Growth Mindset Into My Learning Journey</h2>
+      <p>
+        I plan to make growth mindset my go-to mindset. When I hit a wall —
+        whether it's with coding, communicating with a team, or staying
+        disciplined — I'll remind myself that it's all part of getting better.
+        Instead of avoiding challenges, I'll take them head-on, knowing that
+        pushing through the tough moments is exactly what'll make me stronger.
+        I'll also start framing my mistakes as learning moments instead of
+        something to stress about. It's like debugging my brain along with my
+        code!
+      </p>
+
+      <p>
+        <span class="blog__bold">Fun Fact: </span>Thomas Edison failed over
+        1,000 times while inventing the lightbulb. When asked about it, he said,
+        “I didn't fail 1,000 times. The lightbulb was an invention with 1,000
+        steps.” Now that's some next-level growth mindset!
+      </p>
+
+      <h2>Useful Resource</h2>
+      <p>
+        A great resource on this is Carol Dweck's
+        <a href="https://www.youtube.com/watch?v=hiiEeMN7vbQ">TED Talk</a>,
+        where she breaks down the growth mindset and how it affects everything
+        from school to sports to relationships. Definitely worth a watch.
+      </p>
+
+      <h2>Reflection on How These Concepts Shape My Learning Plan</h2>
+      <p>
+        Learning about neuroplasticity and the growth mindset has completely
+        shifted how I look at my learning plan. First, I know that practice
+        isn't just about grinding through tasks; it's about physically changing
+        my brain. So, every time I sit down to write some code or work on
+        communication skills, I'm not just filling time — I'm building better
+        connections in my brain. This makes me more motivated to stick with
+        things even when they get tough because I know that every bit of effort
+        is literally wiring my brain for success.
+      </p>
+      <p>
+        For someone like me, who tends to lose focus and jump from one thing to
+        the next, understanding neuroplasticity gives me a reason to stay
+        consistent. I now see that sticking with something, even when it's
+        boring or tough, is exactly what my brain needs to make that progress
+        real. Pairing that with the growth mindset, I can reframe moments of
+        frustration or failure. Instead of thinking, “I'm not cut out for this,”
+        I'll be like, “What can I learn from this to get better next time?” It's
+        like turning setbacks into secret training sessions for my brain.
+      </p>
+      <p>
+        In terms of discipline, this knowledge motivates me to build routines
+        and stick with them. If I know that consistent effort is changing my
+        brain for the better, I'm more likely to show up, even on days when I
+        don't feel like it. Plus, I can already see how these mindsets will help
+        me when I transition into a leadership role. Being able to stay calm,
+        communicate clearly, and help others improve their skills will all come
+        down to practicing what I preach about growth and brainpower.
+      </p>
+      <p>
+        <span class="blog__bold">Final Fun Fact:</span>Did you know Albert
+        Einstein's brain wasn't actually bigger than average? What made him a
+        genius was the insane amount of neural connections he built by
+        constantly pushing his mind to tackle hard problems. So next time you're
+        struggling, just remember: you're training to be Einstein-level awesome!
+      </p>
+
+      <a class="blog__footer" href="/blog/">Back to the blog article list</a>
+    </main>
+  </body>
+</html>
