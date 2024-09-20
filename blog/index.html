@@ -24,19 +24,13 @@
       }
     </script>
 
-    <nav class="navigation">
-      <div>
-        <ul class="navigation__links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/blog/" data-current>Blog</a></li>
-          <li><a href="/contacts/">Contacts</a></li>
-        </ul>
-      </div>
-      <button
-        class="navigation__theme_toggle"
-        onclick="toggleTheme()"
-        type="button"
-      >
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" data-current>Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
         <img
           src="/static/svg/sun.svg"
           data-reference="sun-icon"
@@ -52,12 +46,61 @@
 
     <header class="blog__header" data-popper>
       <h1>Welcome to my blog</h1>
-      <p class="blog__disclaimer">here is a list of fresh topics:</p>
-      <ul class="blog__topics">
-        <li><a href="/javascript-dom.html">Javascript Fundamentals</a></li>
-        <li><a href="/html-css.html">CSS Box Model</a></li>
-        <li><a href="/te-houtaewa-template.html">Te Houtaewa</a></li>
-      </ul>
+      <p>here is a list of fresh topics:</p>
     </header>
+
+    <main class="blog__main">
+      <ul class="blog__topics">
+        <li>
+          <a href="/blog/neuroplasticity.html">
+            <span class="blog__category">cultural blog</span>
+            <span class="blog__date">Sep 20, 2024</span>
+            <span class="blog__title"> Neuroplasticity and Mindset </span>
+          </a>
+        </li>
+        <li>
+          <a href="/javascript-dom.html">
+            <span class="blog__category">technical blog</span>
+            <span class="blog__date">Sep 15, 2024</span>
+            <span class="blog__title"> Javascript Fundamentals </span>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/emotional-intelligence.html">
+            <span class="blog__category">cultural blog</span>
+            <span class="blog__date">Sep 12, 2024</span>
+            <span class="blog__title"> Emotional Intelligence </span>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/learning-plan.html">
+            <span class="blog__category">cultural blog</span>
+            <span class="blog__date">Sep 8, 2024</span>
+            <span class="blog__title"> Learning Plan </span>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/identity-values.html">
+            <span class="blog__category">cultural blog</span>
+            <span class="blog__date">Sep 8, 2024</span>
+            <span class="blog__title"> Indentity, Values, Strengt </span>hs
+          </a>
+        </li>
+        <li>
+          <a href="/blog/html-css.html">
+            <span class="blog__category">technical blog</span>
+            <span class="blog__date">Sep 8, 2024</span>
+            <span class="blog__title"> CSS Box Model </span>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/te-houtaewa-template.html">
+            <span class="blog__category">blog template</span>
+            <span class="blog__date">Sep 2, 2024</span>
+            <span class="blog__title"> Te Houtaewa </span>
+          </a>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
