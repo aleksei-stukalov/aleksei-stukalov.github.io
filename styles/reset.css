@@ -43,10 +43,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  transition: color 0.2s;
 }
-
-p { transition: color 0.2s; }
 
 /* improve readability with max-width on paragraphs and lists */
 /* prevent orphans in supported browsers */
@@ -61,4 +58,10 @@ a:active,
 a:hover {
   text-decoration: none;
   color: inherit;
+}
+
+* {
+  transition-delay: 0;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
 }
