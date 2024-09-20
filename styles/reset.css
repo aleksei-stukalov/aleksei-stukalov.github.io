@@ -5,63 +5,16 @@
     url('/static/fonts/Mona Sans/Mona-Sans.woff') format('woff');
 }
 
-/* makes sizing simpler */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; font: inherit; list-style: none; }
+* { transition: all 0.2s ease; }
 
-/* remove default spacing */
-/* force styling of type through styling, rather than elements */
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  list-style: none;
-}
-
-/* min body height */
 body { min-height: 100svh; }
-/* Prevent user from double tab zooming on mobile */
 html { touch-action: manipulation; }
 
-/* responsive images/videos */
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
+img, picture, svg, video { display: block; max-width: 100%; }
 
-/* Improved heading in supported browsers */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+h2, p, li { max-width: 65ch; text-wrap: pretty; }
 
-/* improve readability with max-width on paragraphs and lists */
-/* prevent orphans in supported browsers */
-p,
-li {
-  max-width: 65ch;
-  text-wrap: pretty;
-}
-
-a,
-a:active,
-a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-* {
-  transition-delay: 0;
-  transition-timing-function: ease;
-  transition-duration: 0.2s;
-}
+a, a:active, a:hover { text-decoration: none; color: inherit; }
