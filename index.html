@@ -24,19 +24,13 @@
       }
     </script>
 
-    <nav class="navigation">
-      <div>
-        <ul class="navigation__links">
-          <li><a href="/" data-current>Home</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contacts/">Contacts</a></li>
-        </ul>
-      </div>
-      <button
-        class="navigation__theme_toggle"
-        onclick="toggleTheme()"
-        type="button"
-      >
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/" data-current>Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
         <img
           src="/static/svg/sun.svg"
           data-reference="sun-icon"
@@ -50,7 +44,7 @@
       </button>
     </nav>
 
-    <header class="hero" data-popper>
+    <header class="hero__header" data-popper>
       <h1 class="hero__title">
         <span class="hero__name">Aleksei</span>
         <span class="hero__name">Stukalov</span>
