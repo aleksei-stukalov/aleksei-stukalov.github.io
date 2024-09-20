@@ -1,5 +1,5 @@
 .hero__header {
-  height: 100svh;
+  height: var(--screen-height);
 
   display: flex;
   flex-direction: column;
