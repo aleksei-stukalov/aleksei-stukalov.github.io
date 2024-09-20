@@ -92,60 +92,52 @@
         element, so it doesn't touch or overlap with other elements.
       </p>
 
-      <div>
-        <p class="blog__small">Code:</p>
-        <!-- prettier-ignore-start -->
-        <pre><code>div.apple {
+      <div class="blog__code">
+        <pre><code>div {
   margin-top: 20px;
   margin-right: 15px;
   margin-bottom: 25px;
   margin-left: 10px;
-}
-</code></pre>
-        <!-- prettier-ignore-end -->
+}</code></pre>
       </div>
 
-      <div>
-        <p class="blog__small">Viewport:</p>
-        <div class="blog__code_visualiser">
-          <style>
-            .blog__code_visualiser {
-              display: flex;
-              justify-content: space-between;
-            }
+      <style>
+        .ex-1-box {
+          width: 100px;
+          height: 100px;
+        }
 
-            .example-alfa,
-            .example-bravo {
-              display: flex;
-              justify-content: center;
-              align-items: center;
+        .ex-1-parent {
+          display: flex;
+          justify-content: space-between;
+        }
 
-              font-weight: 400;
-            }
+        .ex-1-box-margin {
+          margin-top: 20px;
+          margin-right: 15px;
+          margin-left: 10px;
+        }
 
-            .example-bravo {
-              margin-top: 20px;
-              margin-right: 15px;
-              margin-left: 10px;
-            }
+        /* Tablet and up*/
+        @media screen and (min-width: 30rem) {
+          .ex-1-parent {
+            justify-content: start;
+            gap: 5rem;
+          }
+        }
+      </style>
 
-            /* Tablet and up*/
-            @media screen and (min-width: 30rem) {
-              .blog__code_visualiser {
-                justify-content: start;
-                gap: 5rem;
-              }
-            }
-          </style>
+      <div class="blog__viewport">
+        <span class="ex-1-parent">
           <div>
-            <div class="box box-alfa"></div>
-            <div class="box box-bravo example-alfa"></div>
+            <div class="ex-1-box secondary"></div>
+            <div class="ex-1-box accent"></div>
           </div>
           <div>
-            <div class="box box-alfa"></div>
-            <div class="box box-bravo example-bravo"></div>
+            <div class="ex-1-box secondary"></div>
+            <div class="ex-1-box ex-1-box-margin accent"></div>
           </div>
-        </div>
+        </span>
       </div>
 
       <h2>Border: The Visible Edge</h2>
@@ -158,35 +150,42 @@
         of the element if box-sizing rule is not set to border-box.
       </p>
 
-      <div>
-        <p class="blog__small">Code:</p>
-        <!-- prettier-ignore-start -->
+      <div class="blog__code">
         <pre><code>div.bravo {
   border: 16px solid #ff4a49;
   box-sizing: border-box;
-}
-</code></pre>
-        <!-- prettier-ignore-end -->
+}</code></pre>
       </div>
 
-      <div>
-        <p class="blog__small">Viewport:</p>
-        <div class="blog__code_visualiser">
-          <style>
-            .example-falcon {
-              display: flex;
-              gap: 5rem;
-            }
+      <style>
+        .ex-2-box {
+          width: 100px;
+          height: 100px;
+        }
 
-            .example-canada {
-              border: 16px solid #ff4a49;
-            }
-          </style>
-          <div class="example-falcon">
-            <div class="box box-alfa"></div>
-            <div class="box box-alfa example-canada"></div>
-          </div>
-        </div>
+        .ex-2-parent {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .ex-2-box-border {
+          border: 16px solid #ff4a49;
+        }
+
+        /* Tablet and up*/
+        @media screen and (min-width: 30rem) {
+          .ex-2-parent {
+            justify-content: start;
+            gap: 5rem;
+          }
+        }
+      </style>
+
+      <div class="blog__viewport">
+        <span class="ex-2-parent">
+          <div class="ex-2-box secondary"></div>
+          <div class="ex-2-box ex-2-box-border secondary"></div>
+        </span>
       </div>
 
       <h2>Padding: The Inner Spacing</h2>
@@ -199,41 +198,52 @@
         the container.
       </p>
 
-      <div>
-        <p class="blog__small">Code:</p>
-        <!-- prettier-ignore-start -->
+      <div class="blog__code">
         <pre><code>div.canada {
   padding-top: 32px;
   padding-left: 16px;
-}
-</code></pre>
-        <!-- prettier-ignore-end -->
+}</code></pre>
       </div>
 
-      <div>
-        <p class="blog__small">Viewport:</p>
-        <div class="blog__code_visualiser">
-          <style>
-            .example-delta {
-              padding-top: 32px;
-              padding-left: 16px;
-            }
+      <style>
+        .ex-3-box {
+          width: 100px;
+          height: 100px;
+        }
 
-            .example-echo {
-              width: 48px;
-              height: 48px;
-              background-color: #ff4a49;
-            }
-          </style>
-          <div class="example-falcon">
-            <div class="box box-alfa">
-              <div class="box-bravo example-echo"></div>
-            </div>
-            <div class="box box-alfa example-delta">
-              <div class="box-bravo example-echo"></div>
-            </div>
+        .ex-3-parent {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .ex-3-child {
+          width: 50px;
+          height: 50px;
+        }
+
+        .ex-3-box-padding {
+          padding-top: 32px;
+          padding-left: 16px;
+        }
+
+        /* Tablet and up*/
+        @media screen and (min-width: 30rem) {
+          .ex-3-parent {
+            justify-content: start;
+            gap: 5rem;
+          }
+        }
+      </style>
+
+      <div class="blog__viewport">
+        <span class="ex-3-parent">
+          <div class="ex-3-box secondary">
+            <div class="ex-3-child accent"></div>
           </div>
-        </div>
+          <div class="ex-3-box ex-3-box-padding secondary">
+            <div class="ex-3-child accent"></div>
+          </div>
+        </span>
       </div>
 
       <h2>Conclusion</h2>
@@ -253,6 +263,7 @@
         they affect the layout, and you'll quickly become more comfortable
         designing responsive and aesthetically pleasing websites.
       </p>
+
       <a class="blog__footer" href="/blog/">Back to the blog article list</a>
     </main>
   </body>
