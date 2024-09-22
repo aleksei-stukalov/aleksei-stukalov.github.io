@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Problem Solving - Aleksei the developer</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" data-current>Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header" data-popper>
+      <h1>Problem Solving!</h1>
+    </header>
+
+    <main class="blog__main">
+      <h2>Blocked by the Simplest Problem</h2>
+      <p>
+        A while ago, I was working on an authentication logic for a backend Nuxt
+        server, trying to get OAuth authentication set up. Everything seemed
+        straightforward at first, but I kept getting errors saying that my
+        challenge and verifier keys didn't match on the server. No matter how
+        many times I rewrote the code, adjusted the logic, or tried different
+        key generation methods, the error persisted. I spent the entire day
+        beating my head against this issue, convinced I was missing something
+        obvious. But as the day wore on, I realized I wasn't going to fix it
+        that day.
+      </p>
+      <p>
+        The next morning, I approached it differently. I sat down, took a
+        breath, and drew a flow diagram of the entire authentication process.
+        That's when it hit me—the problem wasn't in the code itself but in how
+        the flow was handled. Every time the OAuth process redirected to the
+        third-party service, my key generator was creating a new
+        challenge/verifier pair. Essentially, it was resetting on each request,
+        which meant that by the time the verifier came back for validation, it
+        didn't match the original challenge. Once I spotted that flaw in the
+        flow, I adjusted the logic to store the challenge/verifier pair properly
+        across requests, and boom—problem solved!
+      </p>
+      <p>
+        I felt a massive sense of relief and a bit of pride after figuring it
+        out. I learned that sometimes, when you're stuck, the issue might not be
+        in the code but in how you're thinking about the problem. Stepping back
+        to visualize the flow or logic can make all the difference.
+      </p>
+
+      <h2>Elegantly Solving a Problem</h2>
+      <p>
+        On the more satisfying side of things, I recently created a theme styles
+        toggler for the very blog you're reading right now. I wanted users to be
+        able to switch between a light and dark mode seamlessly, without loading
+        new stylesheets or causing a page reload. After considering a few
+        different approaches, I decided to use CSS variables and toggle a
+        data-theme attribute on the body element.
+      </p>
+      <p>
+        The process was simple yet elegant. I broke everything down into smaller
+        problems: First, I defined my CSS variables for the colors and styles I
+        wanted to change. Then, I wrote a small JavaScript function that would
+        toggle the data-theme attribute on the body tag. This attribute
+        controlled which set of CSS variables to apply.
+      </p>
+      <p>
+        Each step was straightforward, and since I took the time to break it
+        into manageable chunks, the entire thing worked on the first try! It
+        felt great to see how smoothly the theme toggled and how clean the
+        solution was. I learned that solving complex problems is often just a
+        matter of breaking them down into smaller, manageable steps. One step at
+        a time.
+      </p>
+
+      <h2>Reflecting on Problem-Solving Techniques</h2>
+      <p>
+        <span class="blog__bold">Pseudocode</span>: I feel confident with
+        pseudocode. It's like drafting out your battle plan before diving into
+        the code. It helps me organize my thoughts and keep track of each step.
+      </p>
+      <p>
+        <span class="blog__bold">Trying Something</span>: Definitely one of my
+        most used methods. Sometimes just writing a quick test or random snippet
+        of code gets the ideas flowing and helps me uncover the solution.
+      </p>
+      <p>
+        <span class="blog__bold">Rubber Ducky Method</span>: I haven't used this
+        much yet, but I can see how talking through the problem (even if it's to
+        a rubber duck) would help clarify what's going on. It's something I want
+        to try more often.
+      </p>
+      <p>
+        <span class="blog__bold">Reading Error Messages</span>: This has become
+        second nature. At first, I used to panic when I saw a giant error
+        message in the console, but now I've learned to look at the details and
+        figure out what it's telling me.
+      </p>
+      <p>
+        <span class="blog__bold">Console.logging</span>: My best friend in
+        coding. Console logs help me trace what's happening inside my code, and
+        I always feel confident using them to debug.
+      </p>
+      <p>
+        <span class="blog__bold">Googling</span>: A skill in its own right! I
+        feel confident in my ability to search for solutions. There's usually
+        someone else who has already encountered the same problem, and Google
+        often leads me to the answer.
+      </p>
+      <p>
+        <span class="blog__bold">Asking Peers for Help</span>: I'm getting
+        better at this. It's easy to want to solve everything on your own, but
+        sometimes a fresh set of eyes can see what you can't.
+      </p>
+      <p>
+        <span class="blog__bold">Asking Coaches for Help</span>: I still
+        hesitate sometimes, thinking I should figure it out myself, but I know
+        they're here to help. I'm working on being more proactive in reaching
+        out.
+      </p>
+      <p>
+        <span class="blog__bold">Improving Your Process with Reflection</span>:
+        I'm starting to embrace reflection more. Taking time to think about what
+        worked and what didn't helps me refine my approach and avoid repeating
+        the same mistakes.
+      </p>
+
+      <h2>A Time I Was Reluctant to Ask for Help</h2>
+      <p>
+        About a year ago, I was working on a website, and I ran into a
+        JavaScript issue. I was trying to implement a feature that worked fine
+        in most browsers, but for some reason, it was breaking in Safari. I
+        spent hours tinkering with my code, convinced that I could solve it on
+        my own. I kept debugging, searching for clues, but the problem
+        persisted.
+      </p>
+      <p>
+        I was reluctant to ask for help because I felt like I should be able to
+        figure it out, especially since the issue seemed so simple. But
+        eventually, after wasting a lot of time, I gave in and asked for help on
+        a Discord channel. Within minutes, someone responded and pointed out
+        that the JavaScript function I was using wasn't supported in Safari on
+        macOS. That was it—a simple compatibility issue. All that stress and
+        time spent when I could've just asked sooner!
+      </p>
+      <p>
+        Next time, I'll definitely ask for help earlier. What I learned from
+        that experience is that no matter how experienced you are, you don't
+        have to solve everything on your own. Sometimes asking for help is the
+        quickest way to move forward. Plus, the development community is super
+        supportive, and there's no shame in reaching out.
+      </p>
+
+      <a class="blog__footer" href="/blog/">Back to the blog article list</a>
+    </main>
+  </body>
+</html>
