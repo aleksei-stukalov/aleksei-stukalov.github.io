@@ -44,6 +44,28 @@
       </button>
     </nav>
 
-    <header></header>
+    <header class="contacts__header">
+      <h1>Contacts</h1>
+      <p><span>+64 (20) 4142 1042</span> is my phone</p>
+      <p>
+        <span>
+          <a href="mailto:aleksei@stukalov.dev">aleksei@stukalov.dev</a>
+        </span>
+        is my email
+      </p>
+    </header>
+
+    <form action="get" class="contacts__form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
   </body>
 </html>

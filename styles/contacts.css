@@ -1,0 +1,28 @@
+.contacts__header {
+  padding-top: 10rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.contacts__header > h1 { margin-bottom: 1rem; font-size: 1.75rem; }
+.contacts__header > p {  letter-spacing: 1.2pt; }
+.contacts__header > p span { margin-right: 0.8rem; font-weight: 500; }
+
+.contacts__form { margin-top: 5rem; display: flex; flex-direction: column; }
+.contacts__form > *:not(button) { width: 36rem; border: none; }
+.contacts__form label { margin-bottom: 0.5rem; letter-spacing: 1px; }
+.contacts__form input { margin-bottom: 1.5rem; padding: 0.5rem; }
+.contacts__form textarea { margin-bottom: 3rem; padding: 0.5rem; }
+
+.contacts__form button {
+  width: 10rem;
+  padding-block: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.contacts__form button:hover { background-color: var(--clr-accent); }
