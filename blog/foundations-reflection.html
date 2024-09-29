@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Human Skills Reflection - Aleksei the developer</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/" data-current>Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header" data-popper>
+      <h1>Human Skills Reflection: A Journey of Growth</h1>
+    </header>
+
+    <main class="blog__main">
+      <p>
+        As I reach the final sprint of my Foundations curriculum, I find myself
+        reflecting on the journey that has shaped my understanding of not only
+        web development but also of myself. The Human Skills component of
+        Foundations has been one of the most surprising and enriching parts of
+        the learning process. While it may seem unusual for a programming course
+        to focus on these skills, it's become clear that the ability to code
+        isn't the only requirement for success in the tech industry. Through a
+        series of activities and reflections, I've gained valuable insights into
+        my own identity, values, and emotional intelligence, all of which are
+        essential for my growth as a developer and team member.
+      </p>
+
+      <h2>What Surprised Me About Human Skills Learning</h2>
+      <p>
+        The most surprising aspect of Human Skills learning is how relevant it
+        is to becoming a well-rounded developer. I came into this program
+        expecting to focus purely on technical skills like JavaScript, HTML, and
+        CSS. However, through activities like identity and values exploration,
+        emotional intelligence exercises, and discussions about neuroplasticity,
+        I've learned that understanding myself and how I relate to others is
+        just as important as my ability to code. The fact that employers in the
+        tech industry highly value these skills shows that coding is only one
+        part of the equation. The rest comes down to how you collaborate,
+        communicate, and solve problems in a team environment.
+      </p>
+
+      <h2>Three New Things I've Learned About Myself and My Ego</h2>
+      <p>
+        1. <strong>Self-Awareness Matters:</strong> I've realized how crucial
+        self-awareness is in managing my ego during challenging situations. I've
+        often been quick to judge myself or others when facing difficulties, but
+        through Human Skills training, I've learned to pause and reflect. I can
+        now better recognize my triggers and emotional responses, which helps me
+        approach problems with a clearer mind.
+      </p>
+      <p>
+        2. <strong>The Importance of Active Listening:</strong> Before starting
+        Foundations, I wasn't fully aware of how often I listened with the
+        intent to reply, rather than to understand. Through techniques like
+        “Listening and Looping,” I've learned the power of active listening,
+        which has improved both my communication skills and my relationships
+        with others.
+      </p>
+      <p>
+        3. <strong>Balancing Confidence and Humility:</strong> The human skills
+        curriculum has taught me the importance of balancing confidence in my
+        abilities with humility. I've learned that it's okay to ask for help and
+        that doing so doesn't diminish my value as a developer. It's actually a
+        strength that promotes growth.
+      </p>
+
+      <h2>
+        The Role of Values, Empathy, and Self-Awareness in Learning and
+        Programming
+      </h2>
+      <p>
+        Values, empathy, and self-awareness are the foundation of effective
+        teamwork and learning in the tech industry. Values guide our decisions,
+        empathy allows us to understand and collaborate with others, and
+        self-awareness helps us manage our emotions and reactions in a
+        productive way. In programming, these qualities enable us to approach
+        challenges with an open mind and to work harmoniously with others, which
+        is key when developing projects as part of a team. Whether it's
+        understanding a teammate's perspective or reflecting on my own strengths
+        and limitations, these human skills are essential for long-term success
+        in a programming career.
+      </p>
+
+      <h2>The Most Challenging Aspects of Human Skills Learning</h2>
+      <p>
+        The most challenging aspect for me was the self-reflection exercises.
+        It's easy to code and debug logical problems, but turning inward and
+        reflecting on my own emotions, values, and reactions is much harder. The
+        journaling exercises and reflections required me to confront parts of
+        myself I hadn't fully acknowledged before, such as my tendencies toward
+        perfectionism or my reluctance to ask for help when I need it. These
+        moments of reflection were uncomfortable at times, but ultimately
+        they've been some of the most valuable moments in the course.
+      </p>
+
+      <h2>
+        Why Do We Focus So Much on Human Skills in a Web Development Bootcamp?
+      </h2>
+      <p>
+        The reason we focus on Human Skills is that technical ability alone
+        doesn't make you a great developer. Employers are looking for people who
+        not only know how to code but who can collaborate effectively,
+        communicate clearly, and adapt to change. Web development is rarely a
+        solo endeavor—it's about teamwork, and having strong human skills
+        ensures that you can work well in a diverse team. It's also about
+        developing the emotional resilience to handle the inevitable setbacks
+        and challenges that come with coding. By focusing on human skills, the
+        bootcamp is preparing us to not only be competent developers but also to
+        be valuable, adaptable, and compassionate team members.
+      </p>
+
+      <h2>Was Human Skills Learning a Waste of Time?</h2>
+      <p>
+        Far from being a waste of time, the human skills component has been
+        crucial to my development as a web developer. While it may be tempting
+        to think that time spent reflecting on my identity or practicing empathy
+        would be better spent coding, the reality is that these skills are
+        directly transferable to the work environment. A developer who can
+        manage their emotions, communicate effectively, and work well with
+        others will always outperform one who focuses solely on technical
+        ability. Learning to code is important, but learning how to work with
+        others and understand oneself is what truly sets a developer apart.
+      </p>
+
+      <p>
+        In conclusion, the Human Skills component of the Foundations curriculum
+        has been an eye-opening experience. It has equipped me with tools to not
+        only navigate the technical challenges of web development but also to
+        approach my career with empathy, resilience, and self-awareness. These
+        skills will undoubtedly play a critical role as I move forward into the
+        bootcamp and, eventually, into the tech industry.
+      </p>
+
+      <a class="blog__footer" href="/blog/">Back to the blog article list</a>
+    </main>
+  </body>
+</html>
