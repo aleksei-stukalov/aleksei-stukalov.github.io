@@ -52,6 +52,7 @@
   font-weight: 400;
   letter-spacing: 1pt;
 
+  color: var(--clr-primary);
   background-color: var(--clr-secondary);
   
   border: none;
