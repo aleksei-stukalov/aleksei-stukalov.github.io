@@ -20,6 +20,7 @@
   --padding-inline: 1.5rem;
   --nav-height: 6rem;
   --screen-height: calc(100svh - var(--nav-height));
+  --shadow-focus: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 body[data-color-theme='dark'] {
