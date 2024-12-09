@@ -22,6 +22,15 @@
       if (localStorage.getItem('theme')) {
         document.body.dataset.colorTheme = localStorage.getItem('theme')
       }
+
+      function handleTextArea(event) {
+        const textArea = event.target
+        const currentLength = textArea.value.length
+        const display = document.querySelector('label[for="message"] span')
+        display.textContent = `${currentLength}/360`
+        textArea.style.height = 'auto'
+        textArea.style.height = `${textArea.scrollHeight}px`
+      }
     </script>
 
     <nav class="nav">
@@ -55,15 +64,26 @@
       </p>
     </header>
 
-    <form action="get" class="contacts__form">
+    <form
+      action="http://formspree.io/hello@stukalov.dev"
+      class="contacts__form"
+      method="POST"
+    >
+      <h2>Send a message</h2>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" required autofocus />
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+      <label for="message">Message:<span>0/360</span></label>
+      <textarea
+        id="message"
+        name="message"
+        maxlength="360"
+        oninput="handleTextArea(event)"
+        required
+      ></textarea>
 
       <button type="submit">Send</button>
     </form>
