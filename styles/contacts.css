@@ -12,7 +12,7 @@
 .contacts__header > p {  letter-spacing: 1.2pt; }
 .contacts__header > p span { margin-right: 0.8rem; font-weight: 500; }
 
-.contacts__form { margin-top: 5rem; display: flex; flex-direction: column; }
+.contacts__form { margin-block: 5rem; display: flex; flex-direction: column; }
 .contacts__form > h2 { margin-bottom: 2rem; font-size: 1.75rem; }
 .contacts__form > *:not(button) { border: none; }
 .contacts__form label { letter-spacing: 1px; display: flex; }
