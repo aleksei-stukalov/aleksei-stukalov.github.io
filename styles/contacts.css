@@ -14,7 +14,7 @@
 
 .contacts__form { margin-top: 5rem; display: flex; flex-direction: column; }
 .contacts__form > h2 { margin-bottom: 2rem; font-size: 1.75rem; }
-.contacts__form > *:not(button) { width: 36rem; border: none; }
+.contacts__form > *:not(button) { border: none; }
 .contacts__form label { letter-spacing: 1px; display: flex; }
 .contacts__form label span { margin-left: auto; letter-spacing: 1px; }
 
@@ -64,4 +64,9 @@
   color: var(--clr-secondary);
   background-color: var(--clr-accent);
   box-shadow: var(--shadow-focus);
+}
+
+/* Laptop and up*/
+@media screen and (min-width: 60rem) {
+  .contacts__form > *:not(button) { width: 36rem; }
 }
