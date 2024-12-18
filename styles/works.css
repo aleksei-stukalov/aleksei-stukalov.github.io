@@ -1,0 +1,3 @@
+.works__main { display: grid; padding-block: 5rem; }
+.works__main > h2 { font-size: 1.2rem; font-weight: 500; }
+.works__main > a { font-size: 0.9rem; margin-block: 1rem; }
