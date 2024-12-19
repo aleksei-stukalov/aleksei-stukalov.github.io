@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Human Skills Reflection - Aleksei the developer</title>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <script type="module" src="/scripts/main.js" defer></script>
+  </head>
+  <body data-color-theme="dark">
+    <script>
+      // We want to remember the theme user has selected, so let's check it.
+      // Let's check if the theme exists and only do stuff in that case.
+      // P.S. can't do early returns in embeded script on html file..
+      if (localStorage.getItem('theme')) {
+        document.body.dataset.colorTheme = localStorage.getItem('theme')
+      }
+    </script>
+
+    <nav class="nav">
+      <ul class="nav__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/works/" data-current>Works</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
+      </ul>
+      <button class="nav__theme_toggle" onclick="toggleTheme()" type="button">
+        <img
+          src="/static/svg/sun.svg"
+          data-reference="sun-icon"
+          alt="Light theme"
+        />
+        <img
+          src="/static/svg/moon.svg"
+          data-reference="moon-icon"
+          alt="Dark theme"
+        />
+      </button>
+    </nav>
+
+    <header class="blog__header" data-popper>
+      <h1>Precious Lists Marketing Website</h1>
+      <a href="https://preciouslists.com" target="_blank"
+        >https://preciouslists.com</a
+      >
+      <img
+        src="/static/animation/precious-lists-preview-ezgif.com-video-to-webp-converter.webp"
+        alt=""
+      />
+    </header>
+
+    <main class="blog__main">
+      <h2>Project Overview</h2>
+      <p>
+        Precious Lists is a smart online application designed to help users
+        securely organise and curate photos, receipts, and information about
+        their art and collectibles in one place. To promote the app, I was
+        contracted to design and develop a marketing website that highlights the
+        app’s ease of use, security, and organisational benefits. The goal was
+        to create a visually appealing, responsive website that effectively
+        conveys how Precious Lists simplifies cataloging and protecting valuable
+        possessions, providing peace of mind for users.
+      </p>
+
+      <h2>Design Collaboration</h2>
+      <p>
+        The website’s design was a joint effort between my partner and me.
+        Throughout the process, we maintained regular check-ins with the client
+        to ensure the design aligned with their vision and goals. This
+        collaborative approach allowed us to refine the user experience
+        continuously and ensure the messaging stayed on point.
+      </p>
+
+      <h2>Key Features and Challenges</h2>
+
+      <p class="blog__bold">Home Page Animation</p>
+      <p>
+        I developed an engaging animation for the home page featuring a laptop
+        and smartphone. This animation highlights how the app works and draws
+        users’ attention to the core functionality of Precious Lists. The
+        animation required careful timing and synchronization to achieve a
+        seamless effect.
+      </p>
+
+      <p class="blog__bold">Scroll-Snapping Navigation</p>
+      <p>
+        To create a modern browsing experience, I implemented a snapping scroll
+        feature that allows users to navigate through sections of the site
+        smoothly. This added an interactive and dynamic feel to the desktop
+        experience. However, during testing, I discovered that mobile browsers
+        handled scroll snapping inconsistently, leading to a less-than-ideal
+        user experience. After discussing this with the client, we decided to
+        disable scroll snapping for mobile users while keeping it for desktop
+        visitors.
+      </p>
+
+      <p class="blog__bold">Responsive and Performant Design</p>
+      <p>
+        Using Next.js as the platform and deploying to Netlify, the website
+        benefits from fast load times and scalability. The site’s responsive
+        design ensures it works well on devices of all sizes. The transition
+        from SASS to Tailwind CSS also improved development efficiency and
+        consistency in styling.
+      </p>
+
+      <p class="blog__bold">Content Collaboration</p>
+      <p>
+        All of the website content was created in close collaboration with the
+        client. From the headlines to the calls-to-action, we made sure the
+        messaging aligned with the app’s purpose and resonated with its target
+        audience.
+      </p>
+
+      <a class="blog__footer" href="/works/">Back to all my works</a>
+    </main>
+  </body>
+</html>
