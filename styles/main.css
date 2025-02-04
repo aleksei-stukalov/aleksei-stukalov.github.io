@@ -49,7 +49,7 @@ body {
 body > * { padding-inline: var(--padding-inline); }
 a:hover { color: var(--clr-accent); }
 
-.nav {
+nav {
   position: sticky;
   top: 0;
   height: var(--nav-height);
@@ -64,7 +64,7 @@ a:hover { color: var(--clr-accent); }
   background-color: var(--clr-primary);
 }
 
-.nav__links { 
+nav ul { 
   display: flex;
   align-items: end;
   gap: 0.5rem;
@@ -72,7 +72,7 @@ a:hover { color: var(--clr-accent); }
   font-weight: 400;
 }
 
-.nav__theme_toggle {
+nav button {
   all: unset;
   position: relative;
   width: 24px;
@@ -81,7 +81,7 @@ a:hover { color: var(--clr-accent); }
   cursor: pointer;
 }
 
-.nav__theme_toggle > img {
+nav button > img {
   position: absolute;
   width: 24;
   height: 24;
@@ -89,14 +89,14 @@ a:hover { color: var(--clr-accent); }
   opacity: 0;
 }
 
-.nav__links a[data-current] { font-weight: 700; }
+nav ul a[data-current] { color: var(--clr-tomato); }
 body[data-color-theme='light'] [data-reference='moon-icon'] { opacity: 1; }
 body[data-color-theme='dark'] [data-reference='sun-icon'] { opacity: 1; }
 
 /* Tablet and up*/
 @media screen and (min-width: 30rem) {
   :root { --padding-inline: 3rem; }
-  .nav__links { margin-top: 0.5rem; gap: 2rem; }
+  nav ul { margin-top: 0.5rem; gap: 2rem; }
 }
 /* Laptop and up*/
 @media screen and (min-width: 60rem) {

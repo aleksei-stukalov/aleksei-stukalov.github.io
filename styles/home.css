@@ -27,7 +27,7 @@
 .hero__title [data-state='far'] { font-weight: 400; }
 
 .hero__partnership { letter-spacing: 0.5pt; }
-.hero__partnership > a { text-decoration: underline; font-weight: 400; }
+.hero__partnership > a { text-decoration: underline; color: var(--clr-tomato); }
 
 /* Tablet and up*/
 @media screen and (min-width: 30rem) {
