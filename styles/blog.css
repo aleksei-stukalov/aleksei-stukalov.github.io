@@ -1,9 +1,15 @@
-.blog__header { padding-block: 10rem 1rem; }
+.blog__header { padding-top: 5rem; }
 .blog__header > h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
 .blog__header > p { font-size: 0.8rem; letter-spacing: 1.2pt; }
 .blog__header > img { aspect-ratio: 4/3; width: 100%; object-fit: contain; }
 
-.blog__main { display: grid; gap: 1rem; letter-spacing: 0.5pt; }
+.blog__main { padding-bottom: 3rem; }
+
+.blog__entry { padding-block: 2rem; }
+.blog__entry > h2 { font-size: 1.4rem; font-weight: 500; margin-top: 3rem; }
+.blog__entry > p { font-size: 1.2rem; margin-block: 1rem;}
+.blog__entry > a { font-size: 1.2rem; text-decoration: underline; }
+.blog__entry > a img { margin-top: 1.5rem; }
 
 .blog__topics { display: grid; }
 .blog__topics > li > a { display: grid; }
@@ -18,10 +24,6 @@
 .blog__bold { font-weight: 500; }
 .blog__focused { color: var(--clr-accent); } /* Need to make this better */
 .blog__small { font-size: 0.8rem; margin-top: 1rem; margin-bottom: 0.5rem; }
-.blog__main > h2 { font-size: 1.2rem; font-weight: 500; margin-top: 2rem; }
-.blog__main > p { font-size: 1.2rem; }
-.blog__main > a { font-size: 0.9rem; font-weight: 500; margin-bottom: 4rem;}
-.blog__main > a img { margin-top: 0.5rem; }
 
 .blog__code::before { content: 'Code'; font-size: 0.8rem; }
 .blog__code { width: 100%; margin-top: 1rem;}
@@ -58,9 +60,10 @@
 
 /* Tablet and up*/
 @media screen and (min-width: 30rem) {
+  .blog__header { padding-top: 10rem; }
   .blog__header > img { width: unset; max-height: 25rem; }
+  .blog__main { padding-top: 3rem; }
   .blog__topics { gap: 2rem; font-size: 1.4rem; }
-  .blog__main { padding-block: 3rem; }
   .blog__main > * { max-width: 46rem; }
   .blog__main > h2 { font-size: 1.3rem; }
   .blog__main > p { line-height: 1.5rem; }
